@@ -9,23 +9,11 @@ const connect = function () {
     conn.on('connect', () => {
         console.log("Succesfully connected to game server!");
         conn.write("Name: Dan")
-        conn.setInterval(() => {
-            conn.write("Move: up");
-        }, 2000);
-        conn.setInterval(() => {
-            conn.write('Move: down');
-        }, 3000);
-        conn.setInterval(() => {
-            conn.write('Move: left');
-        }, 4000);
-        conn.setInterval(() => {
-            conn.write('Move: right');
-        }, 5000)
-        // conn.write('Move: up');
-        // conn.write('Move: down');
-        // conn.write('Move: left')
-        // conn.write('Move: right');
-        // }
+        conn.write('Move: up');
+        conn.write('Move: down');
+        conn.write('Move: left')
+        conn.write('Move: right');
+        
 
     });
 
@@ -39,14 +27,6 @@ const connect = function () {
 
     return conn;
 };
-
-const setupInput = function () {
-    const stdin = process.stdin;
-    stdin.setRawMode(true);
-    stdin.setEncoding("utf8");
-    stdin.resume();
-    return stdin;
-  };
 
 
 
