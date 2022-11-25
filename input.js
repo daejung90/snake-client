@@ -17,7 +17,21 @@ const handleUserInput = function (key) {
     if(key === '\u0003'){
         process.exit();
     }
-  };
+    //send messages
+    if (key === '1') {
+        connection.write('Say: Hello');
+      }
+      if (key === '2') {
+        connection.write('Say: ByeBye');
+      }
+      if (key === '3') {
+        connection.write('Say: My turn');
+      }
+      if (key === '4') {
+        connection.write('Say: gotcha!');
+      }
+    };
+  
 
   const setupInput = function (conn) {
     connection = conn
